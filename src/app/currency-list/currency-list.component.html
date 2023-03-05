@@ -1,0 +1,34 @@
+<div class="card my-5">
+    <div class="card-header">
+        <input type="date" [(ngModel)]="SelectedDate" [max]="maxDate">
+        <button (click)="getCurrency()">Get Currency</button>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">banknoteSelling</th>
+                    <th scope="col">crossOrder</th>
+                    <th scope="col">forexSelling</th>
+                    <th scope="col">forexBuying</th>
+                    <th scope="col">banknoteBuying</th>
+                    <th scope="col">unit</th>
+                    <th scope="col">name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let currency of currencys">
+                    <td>{{ currency.currencyId }}</td>
+                    <td>{{ currency.banknoteSelling }}</td>
+                    <td>{{ currency.crossOrder }}</td>
+                    <td>{{ currency.forexSelling }}</td>
+                    <td>{{ currency.forexBuying }}</td>
+                    <td>{{ currency.banknoteBuying }}</td>
+                    <td>{{ currency.unit }}</td>
+                    <td>{{ currency.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
